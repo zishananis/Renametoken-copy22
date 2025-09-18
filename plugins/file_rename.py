@@ -58,15 +58,8 @@ DOWNLOAD_TEXT = """Download Started..."""
 app = Client("4gb_FileRenameBot", api_id=Config.API_ID, api_hash=Config.API_HASH, session_string=Config.STRING_SESSION)
 
 
-@Client.on_message(filters.private & (filters.audio | filters.document | filters.video))
 async def rename_start(client, message):
-    user_id  = message.from_user.id
-    rkn_file = getattr(message, message.media.value)
-    filename = rkn_file.file_name
-    filesize = humanbytes(rkn_file.file_size)
-    mime_type = rkn_file.mime_type
-    dcid = FileId.decode(rkn_file.file_id).dc_id
-    extension_type = mime_type.split('/')[0]
+    user_id = message.from_user.id
 
     if client.premium and client.uploadlimit:
         await digital_botz.reset_uploadlimit_access(user_id)
@@ -74,10 +67,18 @@ async def rename_start(client, message):
         limit = user_data.get('uploadlimit', 0)
         used = user_data.get('used_limit', 0)
         remain = int(limit) - int(used)
-        used_percentage = int(used) / int(limit) * 100
-        if remain < int(rkn_file.file_size):
-            return await message.reply_text(f"{used_percentage:.2f}% Of Daily Upload Limit {humanbytes(limit)}.\n\n Media Size: {filesize}\n Your Used Daily Limit {humanbytes(used)}\n\nYou have only **{humanbytes(remain)}** Data.\nPlease, Buy Premium Plan s.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🪪 Uᴘɢʀᴀᴅᴇ", callback_data="plans")]]))
-         
+
+        if int(limit) > 0:
+
+    if remain < int(rkn_file.file_size):
+        return await message.reply_text(
+            f"{used_percentage:.2f}% Of Daily Upload Limit {humanbytes(limit)}.\n\n"
+            f"Media Size: {filesize}\nYour Used Daily Limit {humanbytes(used)}\n\n"
+            f"You have only {humanbytes(remain)} Data.\nPlease, Buy Premium Plan s.",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("🪪 Uᴘɢʀᴀᴅᴇ", callback_data="plans")]]
+            )
+		)	
 	    
     if await digital_botz.has_premium_access(user_id) and client.premium:
         if not Config.STRING_SESSION:
