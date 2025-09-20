@@ -50,7 +50,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 from cloudscraper import create_scraper
 from motor.motor_asyncio import AsyncIOMotorClient
+from config import Config
 
+DATABASE_URL = Config.DB_URL
 
 verify_dict = {}
 
