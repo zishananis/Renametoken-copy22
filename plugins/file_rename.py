@@ -46,6 +46,7 @@ from helper.utils import progress_for_pyrogram, convert, humanbytes, add_prefix_
 from helper.database import digital_botz
 from helper.ffmpeg import change_metadata
 from config import Config
+from plugins import is_user_verified, send_verification
 
 # extra imports
 from asyncio import sleep
@@ -60,6 +61,9 @@ app = Client("4gb_FileRenameBot", api_id=Config.API_ID, api_hash=Config.API_HASH
 
 @Client.on_message(filters.private & (filters.audio | filters.document | filters.video))
 async def rename_start(client, message):
+	if not await is_user_verified(message.from_user.id):
+        await send_verification(client, message)
+        return
     user_id  = message.from_user.id
     rkn_file = getattr(message, message.media.value)
     filename = rkn_file.file_name
