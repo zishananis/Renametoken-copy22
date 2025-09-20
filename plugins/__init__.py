@@ -203,15 +203,7 @@ def get_readable_time(seconds):
     return result
 
 verifydb = VerifyDB()
-
-
-    '''
-Note ⚠️: Add This Code In Root Of Your Repo Or Anywhere You Want.
-Credit : @GK-BOTZ
-'''
     
-                
-
 # main copyright herders (©️)
 # I have been working on this repo since 2022
 
