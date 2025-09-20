@@ -40,8 +40,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceRepl
 from helper.database import digital_botz
 from config import Config, rkn
 from helper.utils import humanbytes
-from plugins import __version__ as _bot_version_, __developer__, __database__, __library__, __language__, __programer__
-from plugins import validate_token 
+from plugins import __version__ as _bot_version_, __developer__, __database__, __library__, __language__, __programer__, to validate_token
 
 upgrade_button = InlineKeyboardMarkup([[        
         InlineKeyboardButton('buy premium ✓', user_id=int(6692613520)),
