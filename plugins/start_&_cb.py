@@ -41,6 +41,7 @@ from helper.database import digital_botz
 from config import Config, rkn
 from helper.utils import humanbytes
 from plugins import __version__ as _bot_version_, __developer__, __database__, __library__, __language__, __programer__
+from PATH import validate_token 
 
 upgrade_button = InlineKeyboardMarkup([[        
         InlineKeyboardButton('buy premium ✓', user_id=int(6692613520)),
@@ -59,6 +60,11 @@ upgrade_trial_button = InlineKeyboardMarkup([[
         
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
+    if hasattr(message, 'command') and len(message.command) == 2: 
+       data = message.command[1]
+       if data.split("-")[0] == 'verify':
+           await validate_token(client, message, data)
+           return
     start_button = [[        
         InlineKeyboardButton('Uᴩᴅᴀ𝚃ᴇꜱ', url='https://t.me/ST_Rename_Update'),
         InlineKeyboardButton('Sᴜᴩᴩᴏʀ𝚃', url='https://t.me/ST_Bots_Update')
