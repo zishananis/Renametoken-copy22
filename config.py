@@ -78,15 +78,16 @@ class rkn(object):
 
 Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @ST_Rename_Update 💞</b>"""
 
-    ABOUT_TXT = """<b>╭───────────⍟
-├🤖 ᴍy ɴᴀᴍᴇ : {}
-├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : {}
-├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : {}
-├📕 Lɪʙʀᴀʀy : {}
-├✏️ Lᴀɴɢᴜᴀɢᴇ: {}
-├💾 Dᴀᴛᴀ Bᴀꜱᴇ: {}
-├📊 ᴠᴇʀsɪᴏɴ: <a href=https://t.me/Sitaratoons_Support_bot{}</a></b>     
-╰───────────────⍟ """
+    ABOUT_TXT = """<b>
+╭───────────────⍟
+├<b>🤖 My Name</b> : {}
+├<b>🖥️ Developer</b> : <a href=https://t.me/ST_Rename_Update>ST Rename bot</a> 
+├<b>👨‍💻 Programer</b> : <a href=https://t.me/Sitaratoons_Support_bot>Developer</a>
+├<b>📕 Library</b> : <a href=https://github.com/pyrogram>Pyrogram</a>
+├<b>✏️ Language</b> : <a href=https://www.python.org>Python 3</a>
+├<b>💾 Database</b> : <a href=https://cloud.mongodb.com>Mongo DB</a>
+├<b>📊 Build Version</b> : <a href=https://www.instagram.com/mr_ajay_702?igsh=cDhremNyOWh4Zzdq>Rename v4.7.0</a>     
+╰───────────────⍟</b> """
 
     HELP_TXT = """
 <b>•></b> /start Tʜᴇ Bᴏᴛ.
