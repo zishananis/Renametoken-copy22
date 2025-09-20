@@ -61,7 +61,7 @@ app = Client("4gb_FileRenameBot", api_id=Config.API_ID, api_hash=Config.API_HASH
 
 @Client.on_message(filters.private & (filters.audio | filters.document | filters.video))
 async def rename_start(client, message):
-	if not await is_user_verified(message.from_user.id):
+    if not await is_user_verified(message.from_user.id):
         await send_verification(client, message)
         return
     user_id  = message.from_user.id
