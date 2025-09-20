@@ -43,7 +43,7 @@ class Config(object):
     
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
-    DB_URL = os.environ.get("DB_URL","")
+    DB_URL = os.environ.get("DB_URL","mongodb+srv://sitaratoons:sitaratoons@cluster0.98nq3.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     RKN_PIC = os.environ.get("RKN_PIC", "https://graph.org/file/7d728ffd7c3fa4fbf8799-7e75443ac1704c776a.jpg")
