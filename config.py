@@ -34,8 +34,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # digital_botz client config
-    API_ID = os.environ.get("API_ID", "29037902")
-    API_HASH = os.environ.get("API_HASH", "8f963da8e2040053cf0ad8932244890e")
+    API_ID = os.environ.get("API_ID", "")
+    API_HASH = os.environ.get("API_HASH", "")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
     # premium account string session required 😢 
@@ -43,7 +43,7 @@ class Config(object):
     
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
-    DB_URL = os.environ.get("DB_URL","mongodb+srv://sitaratoons:sitaratoons@cluster0.98nq3.mongodb.net/?retryWrites=true&w=majority")
+    DB_URL = os.environ.get("DB_URL","")
  
     # other configs
     RKN_PIC = os.environ.get("RKN_PIC", "https://graph.org/file/2d6a6d40db8a3f264a69d-a1a1fdf3ca4c67bbef.jpg")
