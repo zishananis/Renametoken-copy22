@@ -62,7 +62,7 @@ SHORTLINK_SITE = os.environ.get('SHORTLINK_SITE', 'shortxlinks.com') # YOUR SHOR
 SHORTLINK_API = os.environ.get('SHORTLINK_API', '32b97a6d89bf4fbe47e14d4b7674d28cc02a422f') # YOUR SHORTLINK API LIKE:- ma82owowjd9hw6_js7
 VERIFY_EXPIRE = os.environ.get('VERIFY_EXPIRE', 43200) # VERIFY EXPIRE TIME IN SECONDS. LIKE:- 0 (ZERO) TO OFF VERIFICATION 
 VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', 'https://t.me/How_to_download_Sitaratoons/4') # LINK OF TUTORIAL TO VERIFY 
-#DATABASE_URL = os.environ.get('DATABASE_URL', '') # MONGODB DATABASE URL To Store Verifications 
+DATABASE_URL = os.environ.get('DATABASE_URL', '') # MONGODB DATABASE URL To Store Verifications 
 COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'File_rename')   # Collection Name For MongoDB 
 PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '6692613520').split()))
 
