@@ -251,7 +251,7 @@ async def doc(bot, update):
          img.save(ph_path, "JPEG")
 
     type = update.data.split("_")[1]
-    if media.file_size > 2000 * 1024 * 1024:
+    if media.file_size > 4000 * 1024 * 1024:
         try:
             if type == "document":
                 filw = await app.send_document(
